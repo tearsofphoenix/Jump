@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no"> 
+		<meta name="apple-mobile-web-app-capable" content="yes"> 
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<style type="text/css">
+			body {
+				margin: 0;
+				background-color: #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var html = html || {};
+			
+			(function(){
+				/** enchant.js から拝借. タッチが有効な端末か.
+				*/
+				var TOUCH_ENABLED = (function() {
+					var div = document.createElement('div');
+					div.setAttribute('ontouchstart', 'return');
+					return typeof div.ontouchstart == 'function';
+				})();
+			
+				var getQueryString = function(key, defaultValue) {
+					// replace [ and ].
+					key = key.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+					var regex = new RegExp("[\\?&]" + key + "=([^&#]*)");
+					var qs = regex.exec(window.location.href);
+					if (qs == null) {
+						if (defaultValue != null) {
+							return defaultValue;
+						} else {
+							return "";
+						}
+					} else {
+						return qs[1];
+					}
+				}
+				
+				html.resPath = "";
+				html.playType = 2;
+				html.startRandomSeed = Math.floor(Math.random() * 1000);
+				html.startStageId = parseInt(getQueryString("stage", 1));
+				html.isPc = !TOUCH_ENABLED; // getQueryString("pc", "0") != "0";
+				html.isSoundLoad = html.isPc; // getQueryString("sound", "0") != "0";
+			}());
+		</script>
+		<script type="text/javascript" src="lib/enchant/enchant.js"></script>
+		<script type="text/javascript" src="enchant_patch.js"></script>
+		<script type="text/javascript" src="osakana4242.js"></script>
+		<script type="text/javascript" src="sprite.js"></script>
+		<script type="text/javascript" src="df.js"></script>
+		<script type="text/javascript" src="stage.js"></script>
+		<script type="text/javascript" src="sprite_camera.js"></script>
+		<script type="text/javascript" src="scene_load.js"></script>
+		<script type="text/javascript" src="scene_title.js"></script>
+		<script type="text/javascript" src="scene_game.js"></script>
+		<script type="text/javascript" src="scene_result.js"></script>
+		<script type="text/javascript" src="game.js"></script>
+	</body>
+</html>

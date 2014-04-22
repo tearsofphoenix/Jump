@@ -8,7 +8,9 @@
 
 #import "VJViewController.h"
 
-@interface VJViewController ()
+@interface VJViewController ()<UIWebViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
@@ -18,12 +20,41 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSURL *url = [[NSBundle mainBundle] URLForResource: @"index"
+                                         withExtension: @"html"
+                                          subdirectory: @"Web"];
+    [_webView setDelegate: self];
+    [_webView loadRequest: [NSURLRequest requestWithURL: url]];
 }
 
-- (void)didReceiveMemoryWarning
+- (BOOL)prefersStatusBarHidden
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return YES;
+}
+
+- (BOOL)           webView: (UIWebView *)webView
+shouldStartLoadWithRequest: (NSURLRequest *)request
+            navigationType: (UIWebViewNavigationType)navigationType
+{
+    NSLog(@"%@", [request URL]);
+    return YES;
+}
+
+- (void)webViewDidStartLoad: (UIWebView *)webView
+{
+    
+}
+
+- (void)webViewDidFinishLoad: (UIWebView *)webView
+{
+    
+}
+
+- (void)webView: (UIWebView *)webView
+didFailLoadWithError: (NSError *)error
+{
+    NSLog(@"%@", error);
 }
 
 @end

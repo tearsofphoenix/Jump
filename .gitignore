@@ -1,0 +1,6 @@
+
+*.xcbkptlist
+
+*.xcscheme
+
+Jump.xcodeproj/xcuserdata

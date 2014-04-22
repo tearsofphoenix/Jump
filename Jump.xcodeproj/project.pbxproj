@@ -16,22 +16,8 @@
 		924573AB19065EFA005991C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924573A919065EFA005991C4 /* Main.storyboard */; };
 		924573AE19065EFA005991C4 /* VJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924573AD19065EFA005991C4 /* VJViewController.m */; };
 		924573B019065EFA005991C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924573AF19065EFA005991C4 /* Images.xcassets */; };
-		924573B719065EFA005991C4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 924573B619065EFA005991C4 /* XCTest.framework */; };
-		924573B819065EFA005991C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9245739719065EFA005991C4 /* Foundation.framework */; };
-		924573B919065EFA005991C4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9245739B19065EFA005991C4 /* UIKit.framework */; };
-		924573C119065EFA005991C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 924573BF19065EFA005991C4 /* InfoPlist.strings */; };
-		924573C319065EFA005991C4 /* JumpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 924573C219065EFA005991C4 /* JumpTests.m */; };
+		924573CD19065F33005991C4 /* Web in Resources */ = {isa = PBXBuildFile; fileRef = 924573CC19065F33005991C4 /* Web */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		924573BA19065EFA005991C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9245738C19065EFA005991C4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9245739319065EFA005991C4;
-			remoteInfo = Jump;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9245739419065EFA005991C4 /* Jump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jump.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,11 +34,8 @@
 		924573AC19065EFA005991C4 /* VJViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VJViewController.h; sourceTree = "<group>"; };
 		924573AD19065EFA005991C4 /* VJViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VJViewController.m; sourceTree = "<group>"; };
 		924573AF19065EFA005991C4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		924573B519065EFA005991C4 /* JumpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JumpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		924573B619065EFA005991C4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		924573BE19065EFA005991C4 /* JumpTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JumpTests-Info.plist"; sourceTree = "<group>"; };
-		924573C019065EFA005991C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		924573C219065EFA005991C4 /* JumpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JumpTests.m; sourceTree = "<group>"; };
+		924573CC19065F33005991C4 /* Web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Web; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,16 +49,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		924573B219065EFA005991C4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				924573B719065EFA005991C4 /* XCTest.framework in Frameworks */,
-				924573B919065EFA005991C4 /* UIKit.framework in Frameworks */,
-				924573B819065EFA005991C4 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,7 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				9245739D19065EFA005991C4 /* Jump */,
-				924573BC19065EFA005991C4 /* JumpTests */,
 				9245739619065EFA005991C4 /* Frameworks */,
 				9245739519065EFA005991C4 /* Products */,
 			);
@@ -93,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				9245739419065EFA005991C4 /* Jump.app */,
-				924573B519065EFA005991C4 /* JumpTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +83,7 @@
 		9245739D19065EFA005991C4 /* Jump */ = {
 			isa = PBXGroup;
 			children = (
+				924573CC19065F33005991C4 /* Web */,
 				924573A619065EFA005991C4 /* VJAppDelegate.h */,
 				924573A719065EFA005991C4 /* VJAppDelegate.m */,
 				924573A919065EFA005991C4 /* Main.storyboard */,
@@ -130,24 +102,6 @@
 				924573A019065EFA005991C4 /* InfoPlist.strings */,
 				924573A319065EFA005991C4 /* main.m */,
 				924573A519065EFA005991C4 /* Jump-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		924573BC19065EFA005991C4 /* JumpTests */ = {
-			isa = PBXGroup;
-			children = (
-				924573C219065EFA005991C4 /* JumpTests.m */,
-				924573BD19065EFA005991C4 /* Supporting Files */,
-			);
-			path = JumpTests;
-			sourceTree = "<group>";
-		};
-		924573BD19065EFA005991C4 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				924573BE19065EFA005991C4 /* JumpTests-Info.plist */,
-				924573BF19065EFA005991C4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -172,24 +126,6 @@
 			productReference = 9245739419065EFA005991C4 /* Jump.app */;
 			productType = "com.apple.product-type.application";
 		};
-		924573B419065EFA005991C4 /* JumpTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 924573C919065EFA005991C4 /* Build configuration list for PBXNativeTarget "JumpTests" */;
-			buildPhases = (
-				924573B119065EFA005991C4 /* Sources */,
-				924573B219065EFA005991C4 /* Frameworks */,
-				924573B319065EFA005991C4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				924573BB19065EFA005991C4 /* PBXTargetDependency */,
-			);
-			name = JumpTests;
-			productName = JumpTests;
-			productReference = 924573B519065EFA005991C4 /* JumpTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -199,11 +135,6 @@
 				CLASSPREFIX = VJ;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Mac003;
-				TargetAttributes = {
-					924573B419065EFA005991C4 = {
-						TestTargetID = 9245739319065EFA005991C4;
-					};
-				};
 			};
 			buildConfigurationList = 9245738F19065EFA005991C4 /* Build configuration list for PBXProject "Jump" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -219,7 +150,6 @@
 			projectRoot = "";
 			targets = (
 				9245739319065EFA005991C4 /* Jump */,
-				924573B419065EFA005991C4 /* JumpTests */,
 			);
 		};
 /* End PBXProject section */
@@ -230,16 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				924573B019065EFA005991C4 /* Images.xcassets in Resources */,
+				924573CD19065F33005991C4 /* Web in Resources */,
 				924573A219065EFA005991C4 /* InfoPlist.strings in Resources */,
 				924573AB19065EFA005991C4 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		924573B319065EFA005991C4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				924573C119065EFA005991C4 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,23 +179,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		924573B119065EFA005991C4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				924573C319065EFA005991C4 /* JumpTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		924573BB19065EFA005991C4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9245739319065EFA005991C4 /* Jump */;
-			targetProxy = 924573BA19065EFA005991C4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		924573A019065EFA005991C4 /* InfoPlist.strings */ = {
@@ -289,14 +196,6 @@
 				924573AA19065EFA005991C4 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		924573BF19065EFA005991C4 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				924573C019065EFA005991C4 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -380,6 +279,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Jump/Jump-Prefix.pch";
 				INFOPLIST_FILE = "Jump/Jump-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -393,48 +293,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Jump/Jump-Prefix.pch";
 				INFOPLIST_FILE = "Jump/Jump-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		924573CA19065EFA005991C4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Jump.app/Jump";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Jump/Jump-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "JumpTests/JumpTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		924573CB19065EFA005991C4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Jump.app/Jump";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Jump/Jump-Prefix.pch";
-				INFOPLIST_FILE = "JumpTests/JumpTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -455,14 +316,6 @@
 			buildConfigurations = (
 				924573C719065EFA005991C4 /* Debug */,
 				924573C819065EFA005991C4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		924573C919065EFA005991C4 /* Build configuration list for PBXNativeTarget "JumpTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				924573CA19065EFA005991C4 /* Debug */,
-				924573CB19065EFA005991C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
