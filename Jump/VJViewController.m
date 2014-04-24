@@ -19,11 +19,52 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
-    NSURL *url = [[NSBundle mainBundle] URLForResource: @"index"
-                                         withExtension: @"html"
-                                          subdirectory: @"Web"];
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSString *libraryPath = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES)[0];
+    
+    NSString *targetPath = [libraryPath stringByAppendingPathComponent: @"/Web"];
+    if (![manager fileExistsAtPath: targetPath])
+    {
+        NSError *error = nil;
+        NSString *sourcePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent: @"/Web"];
+        
+        [manager copyItemAtPath: sourcePath
+                         toPath: targetPath
+                          error: &error];
+        if (error)
+        {
+            NSLog(@"%@", error);
+        }
+        
+        error = nil;
+        
+        NSString *content = [[NSString alloc] initWithContentsOfFile: [[NSBundle mainBundle] pathForResource: @"df"
+                                                                                                      ofType: @"js"]
+                                                            encoding: NSUTF8StringEncoding
+                                                               error: &error];
+        if (error)
+        {
+            NSLog(@"%@", error);
+        }
+
+        error = nil;
+        
+        NSInteger height = [[UIScreen mainScreen] bounds].size.height;
+        
+        content = [NSString stringWithFormat: content, height];
+        [content writeToFile: [targetPath stringByAppendingPathComponent: @"/df.js"]
+                  atomically: YES
+                    encoding: NSUTF8StringEncoding
+                       error: &error];
+        if (error)
+        {
+            NSLog(@"%@", error);
+        }
+    }
+    
+    NSURL *url = [NSURL fileURLWithPath: [targetPath stringByAppendingPathComponent: @"/index.html"]];
+    
     [_webView setDelegate: self];
     [_webView loadRequest: [NSURLRequest requestWithURL: url]];
 }
@@ -43,12 +84,12 @@ shouldStartLoadWithRequest: (NSURLRequest *)request
 
 - (void)webViewDidStartLoad: (UIWebView *)webView
 {
-    
+
 }
 
 - (void)webViewDidFinishLoad: (UIWebView *)webView
 {
-    
+
 }
 
 - (void)webView: (UIWebView *)webView

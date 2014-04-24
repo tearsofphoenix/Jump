@@ -17,6 +17,7 @@
 		924573AE19065EFA005991C4 /* VJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 924573AD19065EFA005991C4 /* VJViewController.m */; };
 		924573B019065EFA005991C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924573AF19065EFA005991C4 /* Images.xcassets */; };
 		924573CD19065F33005991C4 /* Web in Resources */ = {isa = PBXBuildFile; fileRef = 924573CC19065F33005991C4 /* Web */; };
+		926BF9341908B9BA00125BA1 /* df.js in Resources */ = {isa = PBXBuildFile; fileRef = 926BF9321908B83400125BA1 /* df.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		924573AF19065EFA005991C4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		924573B619065EFA005991C4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		924573CC19065F33005991C4 /* Web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Web; sourceTree = "<group>"; };
+		926BF9321908B83400125BA1 /* df.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = df.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		9245739D19065EFA005991C4 /* Jump */ = {
 			isa = PBXGroup;
 			children = (
+				926BF9321908B83400125BA1 /* df.js */,
 				924573CC19065F33005991C4 /* Web */,
 				924573A619065EFA005991C4 /* VJAppDelegate.h */,
 				924573A719065EFA005991C4 /* VJAppDelegate.m */,
@@ -159,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926BF9341908B9BA00125BA1 /* df.js in Resources */,
 				924573B019065EFA005991C4 /* Images.xcassets in Resources */,
 				924573CD19065F33005991C4 /* Web in Resources */,
 				924573A219065EFA005991C4 /* InfoPlist.strings in Resources */,
@@ -318,6 +322,7 @@
 				924573C819065EFA005991C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
